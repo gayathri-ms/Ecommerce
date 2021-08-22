@@ -1,0 +1,380 @@
+.parallax {
+  padding: 10px;
+  width: 900px;
+  background: #eefffb; /* fallback for old browsers */
+
+  border: 1px solid rgb(145, 145, 229);
+  z-index: -1;
+  margin: auto;
+  margin-top: 80px;
+}
+.redman {
+  height: 200px;
+  width: 200px;
+  z-index: 3;
+  margin-left: 100px;
+}
+.redman1 {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  z-index: 3;
+  margin-top: 200px;
+  margin-left: -600px;
+  animation: punjabi 1s infinite ease-in-out alternate;
+}
+@keyframes punjabi {
+  from {
+    transform: scale(1) rotate(4deg);
+  }
+  to {
+    transform: scale(1.1) rotate(-4deg);
+  }
+}
+.loc {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  z-index: 4;
+  animation: loc 1s infinite ease-in-out alternate;
+}
+@keyframes loc {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.3);
+  }
+}
+.loc1 {
+  top: 200px;
+  margin-left: 100px;
+}
+.loc2 {
+  top: 400px;
+  margin-left: -250px;
+}
+.loc3 {
+  top: 510px;
+  margin-left: -490px;
+}
+.loc4 {
+  top: -45px;
+  margin-left: -35px;
+}
+.loc5 {
+  top: 80px;
+  margin-left: -290px;
+}
+.loc6 {
+  top: 450px;
+  margin-left: -50px;
+}
+.loc10 {
+  top: 250px;
+  margin-left: 70px;
+}
+.redman2 {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  z-index: 5;
+  margin-top: 390px;
+  margin-left: 700px;
+  /* animation: girlthink 1s infinite ease-in-out alternate; */
+}
+.redman2:hover {
+  transform: scale(1.1) rotate(4deg);
+}
+
+.redman3 {
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  z-index: 3;
+  margin-top: 190px;
+  margin-left: -450px;
+}
+.redman3:hover {
+  transform: scale(1.1);
+}
+.redman4 {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  z-index: 3;
+  margin-top: -20px;
+  margin-left: 100px;
+  transform: rotate(10deg);
+}
+.redman5 {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  z-index: 3;
+  margin-top: 400px;
+  margin-left: 600px;
+  animation: mymove 10s infinite linear forwards;
+}
+
+div:hover {
+  animation-play-state: paused;
+}
+
+@keyframes mymove {
+  0% {
+    left: 0px;
+  }
+  25% {
+    left: -200px;
+    top: 5px;
+  }
+  30% {
+    top: -25px;
+    left: 30px;
+  }
+  60% {
+    left: 70px;
+    top: -25px;
+  }
+  65% {
+    top: -25px;
+    left: -70px;
+  }
+  85% {
+    left: 50px;
+  }
+
+  100% {
+    left: 80px;
+    top: 50px;
+  }
+}
+.redman9 {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  z-index: 4;
+  margin-top: 450px;
+  margin-left: -700px;
+  animation: white1 1s infinite ease-in-out alternate;
+}
+.redman6 {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  z-index: 3;
+  margin-top: 450px;
+  margin-left: -400px;
+  animation: white1 1s infinite ease-in-out alternate;
+}
+@keyframes white1 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+.redman7 {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  z-index: 3;
+  margin-top: 120px;
+  margin-left: -550px;
+}
+.redman7:hover {
+  transform: rotate(-10deg) scale(1.1);
+}
+.redman8 {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  z-index: 3;
+  margin-top: 150px;
+  margin-left: 600px;
+}
+.redman8:hover {
+  transform: rotate(35deg);
+}
+.background {
+  background-position: center;
+  margin-left: 80px;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  height: 69.45vh;
+  background-repeat: no-repeat;
+  width: 700px;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+}
+
+.background--spring {
+  background-image: url("./images/img1.png");
+}
+
+.background--summer {
+  background-image: url("./images/img2.png");
+  margin-left: 88px;
+}
+
+.background--fall {
+  background-image: url("./images/img3.png");
+  margin-left: 97.5px;
+}
+.message-blue,
+.message-green,
+.message-orange {
+  position: absolute;
+  padding: 10px;
+  /* background-image: url("./images/man1.gif"); */
+  background-color: #a8ddfd;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 150px;
+  text-align: left;
+  border: 1px solid #97c6e3;
+  border-radius: 10px;
+}
+
+.message-content {
+  padding: 0;
+  margin: 0;
+}
+.message-blue:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 15px solid #a8ddfd;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  bottom: 0;
+  left: -15px;
+}
+
+.message-blue:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 17px solid #97c6e3;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  bottom: -1px;
+  left: -17px;
+}
+
+.message-orange:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 15px solid #a8ddfd;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  bottom: 0;
+  right: -15px;
+}
+
+.message-orange:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 17px solid #a8ddfd;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  bottom: -1px;
+  right: -17px;
+}
+.message-green:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 15px solid #a8ddfd;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  top: 0;
+  left: -15px;
+}
+
+.message-green:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 17px solid #97c6e3;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  top: -1px;
+  left: -17px;
+}
+.punjabi_msg {
+  top: 70px;
+  margin-left: -250px;
+}
+.grlthink_msg {
+  top: 240px;
+  margin-left: 360px;
+}
+.girlrun_msg {
+  top: -10px;
+  margin-left: 440px;
+  transform: rotate(-5deg);
+}
+.girlrun_msg:hover {
+  transform: rotate(0deg);
+}
+.coolguy_msg {
+  top: 210px;
+  margin-left: -270px;
+}
+.shopping_msg {
+  top: -10px;
+  z-index: 5;
+  margin-left: -200px;
+}
+.cycle_msg {
+  top: 60px;
+  margin-left: 300px;
+}
+.counter {
+  top: 550px;
+  margin-left: 290px;
+  position: absolute;
+  color: rgb(29, 19, 19);
+
+  border: 1px solid black;
+  text-align: center;
+}
+
+.counter h1 {
+  font-weight: normal;
+}
+
+.counter li {
+  display: inline-block;
+  font-size: 1em;
+  list-style-type: none;
+  padding: 15px;
+  text-transform: uppercase;
+}
+
+.counter li span {
+  display: block;
+  font-size: 3rem;
+}
+.coming {
+  top: 420px;
+  position: absolute;
+  margin-left: 290px;
+  font-size: 3em;
+  /* list-style-type: none; */
+  /* padding: 15px; */
+}
