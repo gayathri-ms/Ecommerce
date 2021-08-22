@@ -7,6 +7,8 @@ import z from "./zz";
 import { FaShoppingCart } from "react-icons/fa";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { useState } from "react";
+import { AiFillStar } from "react-icons/ai";
+
 
 const sortby = ["Relevance", "Low To High",  "Popularity", "High To Low","Discount"];
 const Products = () => {
@@ -59,12 +61,13 @@ const Products = () => {
     setProd([...prod].sort((b, a) => Number(a.discount) - Number(b.discount)));
     setSet(sortby[4]);
   }
+  const rel = () => {
+    setProd(newp);
+  }
   const price = (pri) => {
     if(pri === 1)
     {
-      const newprod = newp.filter((p,index) => 
-        p.Price >= 0 && p.Price < 501
-      );
+      const newprod = newp.filter((p,index) => p.Price >= 0 && p.Price < 501);
       setProd(newprod);
     }
      else if(pri === 2)
@@ -90,6 +93,60 @@ const Products = () => {
     }
   }
 
+  const rate = (rat) => {
+    if (rat === 1) {
+      const newprod = newp.filter((p,index) => p.rating >= 1);
+      setProd(newprod);
+    }
+    else if (rat === 2) {
+      const newprod = newp.filter((p,index) => p.rating >= 2)
+      setProd(newprod);
+    }
+    else if (rat === 3) {
+      const newprod = newp.filter((p,index) => p.rating >= 3);
+      setProd(newprod);
+    }
+    else if (rat === 4) {
+      const newprod = newp.filter((p,index) => p.rating >= 4);
+      setProd(newprod);
+    }
+  }
+
+  const discnt = (dis) => {
+    if (dis === 1) {
+      const newprod = newp.filter((p,index) => p.discount >= 10);
+      setProd(newprod);
+    }
+    else if (dis === 2) {
+      const newprod = newp.filter((p,index) => p.discount >= 20);
+      setProd(newprod);
+    }
+    else if (dis === 3) {
+      const newprod = newp.filter((p,index) => p.discount >= 30);
+      setProd(newprod);
+    }
+    else if (dis === 4) {
+      const newprod = newp.filter((p,index) => p.discount >= 40);
+      setProd(newprod);
+    }
+    else if (dis === 5) {
+      const newprod = newp.filter((p,index) => p.discount >= 50);
+      setProd(newprod);
+    }
+    else if (dis === 6) {
+      const newprod = newp.filter((p,index) => p.discount >= 60);
+      setProd(newprod);
+    }
+    else if (dis === 7) {
+      const newprod = newp.filter((p,index) => p.discount >= 70);
+      setProd(newprod);
+    }
+    else if (dis === 8) {
+      const newprod = newp.filter((p,index) => p.discount >= 80);
+      setProd(newprod);
+    }
+  }
+
   return (
     <div className="allproduct">
       <div className="allprod_nav">
@@ -106,7 +163,7 @@ const Products = () => {
             <RiArrowDownSLine className="allprd_arr" />
           </div>
           <div className="allprod_dropdown-content">
-            <p onClick={() => setCat1(1)}>Relevance</p>
+            <p onClick={rel}>Relevance</p>
             <p onClick={aec}>Price: Low To High</p>
             <p onClick={dec}>Price: High To Low</p>
             <p onClick={pop}>Popularity</p>
@@ -123,6 +180,27 @@ const Products = () => {
             <button className="allprd_rbtn" onClick={() => price(3)}>1000 and 10000</button>
             <button className="allprd_rbtn" onClick={() => price(4)}>10000 and above</button>
           </div>
+       
+          <p className="allprd_prange">Rating</p>
+           <div className="allprd_range">
+            <button className="allprd_rbtn" onClick={() => rate(1)}>1 <AiFillStar /> and above </button>
+            <button className="allprd_rbtn" onClick={() => rate(2)}>2 <AiFillStar /><AiFillStar /> and above</button>
+            <button className="allprd_rbtn" onClick={() => rate(3)}>3 <AiFillStar /> <AiFillStar /> <AiFillStar /> and above</button>
+            <button className="allprd_rbtn" onClick={() => rate(4)}>4 <AiFillStar /> <AiFillStar /> <AiFillStar /> <AiFillStar /> and above</button>
+          </div>
+
+          <div className="allprod_slid">
+            <p className="allprd_prange">Discount Range</p>
+            <div className="allprd_range">
+               {
+                 [...Array(8)].map((_ , index) => {
+                   return (
+                      <button key={index} className="allprd_discbtn" onClick={() => discnt(index+1)}>{10*(index+1)}% and above</button>
+                     );
+                 })
+               }
+             </div>
+           </div>
         </div>
 
         <div className="container1">
